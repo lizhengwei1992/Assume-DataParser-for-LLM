@@ -22,7 +22,7 @@ Compared to well-known commercial products, MinerU is still young. If you encoun
     - Converts most equations to latex
     - Works on GPU, CPU, or MPS
 
-- [unstructed](https://github.com/Unstructured-IO/unstructured)
+- [unstructed](https://github.com/Unstructured-IO/unstructured)  
   The `unstructured` library provides open-source components for ingesting and pre-processing images and text documents, such as PDFs, HTML, Word docs, and [many more](https://docs.unstructured.io/open-source/core-functionality/partitioning). The use cases of `unstructured` revolve around streamlining and optimizing the data processing workflow for LLMs. `unstructured` modular functions and connectors form a cohesive system that simplifies data ingestion and pre-processing, making it adaptable to different platforms and efficient in transforming unstructured data into structured outputs.
 
 
@@ -32,3 +32,21 @@ Compared to well-known commercial products, MinerU is still young. If you encoun
 
 - [PDF-Wukong](https://github.com/yh-hust/PDF-Wukong)  
   Document understanding is a challenging task to process and comprehend large amounts of textual and visual information. Recent advances in Large Language Models (LLMs) have significantly improved the performance of this task. However, existing methods typically focus on either plain text or a limited number of document images, struggling to handle long PDF documents with interleaved text and images, especially in academic papers. In this paper, we introduce PDF-WuKong, a multimodal large language model (MLLM) which is designed to enhance multimodal question-answering (QA) for long PDF documents. PDF-WuKong incorporates a sparse sampler that operates on both text and image representations, significantly improving the efficiency and capability of the MLLM. The sparse sampler is integrated with the MLLM's image encoder and selects the paragraphs or diagrams most pertinent to user queries for processing by the language model. To effectively train and evaluate our model, we construct PaperPDF, a dataset consisting of a broad collection of academic papers sourced from arXiv, multiple strategies are proposed to generate automatically 1M QA pairs along with their corresponding evidence sources. Experimental results demonstrate the superiority and high efficiency of our approach over other models on the task of long multimodal PDF understanding, surpassing proprietary products by an average of 8.6% on F1.
+
+
+### LLM/MLM Based
+- [open-parse](https://github.com/Filimoa/open-parse)  
+  Easily chunk complex documents the same way a human would.  
+  Chunking documents is a challenging task that underpins any RAG system. High quality results are critical to a sucessful AI application, yet most open-source libraries are limited in their ability to handle complex documents.  
+  Open Parse is designed to fill this gap by providing a flexible, easy-to-use library capable of visually discerning document layouts and chunking them effectively.
+- [gptpdf](https://github.com/CosmosShadow/gptpdf)  
+  Using VLLM (like GPT-4o) to parse PDF into markdown.
+  Our approach is very simple (only 293 lines of code), but can almost perfectly parse typography, math formulas, tables, pictures, charts, etc. Average cost per page: $0.013
+
+
+## API server
+- [chunkr](https://github.com/lumina-ai-inc/chunkr)  
+  We're Lumina. We've built a search engine that's five times more relevant than Google Scholar. You can check us out at [lumina.sh](https://www.lumina.sh). We achieved this by bringing state-of-the-art search technology (the best in dense and sparse vector embeddings) to academic research.   
+While search is one problem, sourcing high-quality data is another. We needed to process millions of PDFs in-house to build Lumina, and we found that existing solutions to extract structured information from PDFs were too slow and too expensive ($$ per page).   
+Chunk my docs provides a self-hostable solution that leverages state-of-the-art (SOTA) vision models for segment extraction and OCR, unifying the output through a Rust Actix server. This setup allows you to process PDFs and extract segments at an impressive speed of approximately 5 pages per second on a single NVIDIA L4 instance, offering a cost-effective and scalable solution for high-accuracy bounding box segment extraction and OCR. This solution has models that accommodate both GPU and CPU environments. Try the UI on [chunkr.ai](https://www.chunkr.ai)!
+

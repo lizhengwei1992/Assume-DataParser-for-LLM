@@ -42,6 +42,8 @@ Compared to well-known commercial products, MinerU is still young. If you encoun
 - [gptpdf](https://github.com/CosmosShadow/gptpdf)  
   Using VLLM (like GPT-4o) to parse PDF into markdown.
   Our approach is very simple (only 293 lines of code), but can almost perfectly parse typography, math formulas, tables, pictures, charts, etc. Average cost per page: $0.013
+- [Crawl4AI](https://github.com/unclecode/crawl4ai)  
+  Crawl4AI simplifies asynchronous web crawling and data extraction, making it accessible for large language models (LLMs) and AI applications.
 
 
 ## API server
